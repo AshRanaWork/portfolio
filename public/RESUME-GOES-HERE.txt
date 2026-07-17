@@ -1,1 +1,0 @@
-Your resume.pdf goes in this /public folder — the download buttons already point to /resume.pdf
