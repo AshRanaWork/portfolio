@@ -1,0 +1,161 @@
+/* globals.css — the design system.
+   Colors and spacing are defined once as "tokens" (CSS variables)
+   so the whole site stays consistent and is easy to re-theme. */
+
+:root {
+  --bg: #0a0a12;              /* near-black with a violet undertone */
+  --ink: #ecebff;             /* main text */
+  --muted: #9b98b8;           /* secondary text */
+  --violet: #8b5cf6;          /* the accent */
+  --violet-bright: #a78bfa;
+  --violet-deep: #4c1d95;
+  --surface: rgba(255, 255, 255, 0.04);   /* glass card fill */
+  --border: rgba(167, 139, 250, 0.16);    /* glass card edge */
+  --radius: 18px;
+  --max-w: 1100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Faint chart-grid texture over the whole page — a nod to the
+   analyst's canvas. Barely visible, but it kills the "flat void" look. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
+  z-index: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+section { padding: 110px 0; }
+
+/* SQL-style eyebrow above each section title — the analyst signature */
+.eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8rem;
+  color: var(--violet-bright);
+  opacity: 0.85;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  margin-bottom: 18px;
+}
+
+.section-sub {
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 48px;
+}
+
+/* Glassmorphism card used across sections */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--violet), #6d28d9);
+  color: white;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.35);
+}
+.btn-primary:hover { box-shadow: 0 12px 40px rgba(139, 92, 246, 0.5); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { border-color: var(--violet); }
+
+/* ---------- Timeline layout ---------- */
+.tl-item {
+  position: relative;
+  width: calc(50% - 40px);
+  margin-bottom: 42px;
+}
+.tl-left  { margin-right: auto; }
+.tl-right { margin-left: auto; }
+
+.tl-dot {
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--violet-bright);
+  box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.2), 0 0 16px rgba(139, 92, 246, 0.8);
+}
+.tl-left  .tl-dot { right: -47px; }
+.tl-right .tl-dot { left: -47px; }
+
+/* Mobile: one column, line hugs the left edge */
+@media (max-width: 720px) {
+  .tl-line { left: 11px !important; }
+  .tl-item { width: 100%; padding-left: 40px; }
+  .tl-left .tl-dot, .tl-right .tl-dot { left: 4px; right: auto; }
+}
+
+/* On phones, collapse the middle nav links — logo + Contact is enough */
+@media (max-width: 640px) {
+  .nav-links { display: none !important; }
+}
+
+/* Accessibility: users who ask the OS for less motion get less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
