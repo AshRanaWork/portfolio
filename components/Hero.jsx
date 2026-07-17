@@ -110,7 +110,7 @@ export default function Hero() {
 
           <motion.div variants={child} style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <a href="#projects" className="btn btn-primary">View my work</a>
-            <a href={site.resumeFile} download className="btn btn-ghost">Download resume ↓</a>
+            <a href={`mailto:${site.email}`} className="btn btn-ghost">Get in touch →</a>
           </motion.div>
         </motion.div>
       </div>

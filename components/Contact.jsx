@@ -1,6 +1,6 @@
 "use client";
-// Contact.jsx — the closer. Big invitation, three clear actions,
-// and a small footer. The paragraph text now comes from
+// Contact.jsx — the closer. Big invitation, two clear actions,
+// and a small footer. The paragraph text comes from
 // data/content.js (site.contactBlurb) so you never edit this file.
 
 import { motion } from "framer-motion";
@@ -50,9 +50,6 @@ export default function Contact() {
             </a>
             <a href={site.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">
               LinkedIn ↗
-            </a>
-            <a href={site.resumeFile} download className="btn btn-ghost">
-              Resume (PDF) ↓
             </a>
           </div>
         </motion.div>
