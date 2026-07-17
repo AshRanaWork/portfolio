@@ -83,7 +83,7 @@ export const timeline = [
   },
   {
     period: "Graduated",
-    role: "Bachelors in Entertainment Business Management (Hospitality Management)",
+    role: "Bachelors in Hospitality Management (Entertainment Business Management)",
     org: "University of Nevada, Las Vegas",
     body: "Built a foundation in business operations, revenue models, and customer behavior across the entertainment and hospitality industry.",
   },
