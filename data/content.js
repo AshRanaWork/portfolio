@@ -9,7 +9,7 @@ export const site = {
   tagline:
     "I dig into business problems, surface the trends hiding in the data, and build AI-powered systems that automate the manual work.",
   email: "ashranawork@gmail.com",
-  linkedin: "https://linkedin.com/in/ashranaoffice",
+  linkedin: "https://linkedin.com/in/ashranawork",
   github: "https://github.com/ashranawork",
   resumeFile: "/resume.pdf", // drop resume.pdf into the /public folder
   // Contact section paragraph:
