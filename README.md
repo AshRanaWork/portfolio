@@ -1,32 +1,27 @@
-# Your Portfolio
+# Ash Rana — Portfolio
 
-A dark, animated, 3D portfolio built with Next.js, react-three-fiber, and Framer Motion.
+My personal portfolio: a dark, animated, 3D single-page site built to show what I do at the intersection of data analysis, business intelligence, and AI automation.
 
-## Run it on your computer
+**Live site:** [ashranawork.com](https://ashranawork.com)
 
-1. Install [Node.js](https://nodejs.org) (LTS version) if you don't have it.
-2. Open a terminal in this folder and run:
+## What's inside
 
-```bash
-npm install    # downloads the libraries (one time, ~1 min)
-npm run dev    # starts the site
-```
+An animated hero, an interactive 3D tech-stack section with lightweight custom physics, a scroll-driven career timeline, and featured projects with live dashboards and links to source code.
 
-3. Open http://localhost:3000
+## Built with
 
-## Make it yours (5 minutes)
+- **Next.js 14** (App Router)
+- **react-three-fiber** and **drei** for the 3D tech-stack orbs
+- **Framer Motion** for scroll and entrance animations
+- Deployed on **Vercel**
 
-- **All text, links, jobs, projects** → edit `data/content.js`. It's heavily commented; nothing else needs touching.
-- **Resume** → drop your PDF into `public/` named `resume.pdf`.
-- **Project screenshots** → export your Power BI dashboards as PNG (~1600px wide), drop them in `public/projects/`, and update the `image` paths in `content.js`.
-- **Live Power BI embed (optional)** → in Power BI: File → Embed report → Publish to web, paste the URL into a project's `embedUrl`. Only for non-confidential data — publish-to-web is public.
+## Featured projects
 
-## Deploy free on Vercel
+- **[AI Data Analyst Agent](https://github.com/AshRanaWork/ai-data-analyst-agent)** — an autonomous agent that answers plain-English questions by writing and running its own SQL, with read-only guardrails and a full decision log. Python + Gemini API.
+- **[Retail Marketing Campaign Analysis](https://github.com/AshRanaWork/retail-marketing-campaign-analysis)** — SQL and Tableau analysis of 2.6M retail transactions, separating genuine campaign lift from selection bias.
+- **[Pricing Discrepancy Detection Tool](https://github.com/AshRanaWork/pricing-discrepancy-tool)** — Python and Pandas tool that flags vendor overcharges and drafts correction emails with the OpenAI API.
 
-1. Push this folder to a GitHub repository (GitHub Desktop is the easiest way).
-2. Go to [vercel.com](https://vercel.com), sign in with GitHub, click **Add New → Project**, pick the repo, click **Deploy**. That's it — Vercel detects Next.js automatically.
-3. Every time you push a change to GitHub, the live site updates itself.
+## Contact
 
-### Custom domain (optional)
-
-Buy a domain (Namecheap/Cloudflare, ~$10/yr) → in Vercel: Project → Settings → Domains → add it → copy the two DNS records Vercel shows into your registrar's DNS settings. Live in ~10 minutes, HTTPS automatic.
+- **Email:** ashranawork@gmail.com
+- **LinkedIn:** [linkedin.com/in/ashranaoffice](https://linkedin.com/in/ashranaoffice)
