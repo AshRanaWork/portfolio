@@ -112,17 +112,30 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              {p.github && (
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-ghost"
-                  style={{ padding: "9px 20px", fontSize: "0.88rem" }}
-                >
-                  View on GitHub ↗
-                </a>
-              )}
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                {p.liveUrl && (
+                  <a
+                    href={p.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary"
+                    style={{ padding: "9px 20px", fontSize: "0.88rem" }}
+                  >
+                    Try it live ↗
+                  </a>
+                )}
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-ghost"
+                    style={{ padding: "9px 20px", fontSize: "0.88rem" }}
+                  >
+                    View on GitHub ↗
+                  </a>
+                )}
+              </div>
             </div>
           </motion.article>
         ))}

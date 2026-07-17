@@ -42,7 +42,7 @@ export const techStack = [
   { name: "Python", size: 1.15 },
   { name: "SQL", size: 1.1 },
   { name: "Power BI", size: 1.1 },
-  { name: "Tableau", size: 1.0 },
+  { name: "Tableau", size: 1.3 },
   { name: "LLM APIs", size: 1.1 },
   { name: "Pandas", size: 0.85 },
   { name: "Excel", size: 0.85 },
@@ -98,10 +98,11 @@ export const timeline = [
 export const projects = [
   {
     title: "AI Data Analyst Agent",
-    body: "An autonomous agent that answers plain-English business questions by inspecting a database's schema, writing and executing its own SQL, recovering from its own query errors, and explaining the results with a transparent decision log. Built with read-only guardrails and safety limits. The natural next step from the campaign analysis: first I did it by hand, then I built the system that does it on demand.",
-    tags: ["Python", "Gemini API", "AI Agents"],
+    body: "A deployed, autonomous agent that answers plain-English business questions by inspecting a database's schema, writing and running its own SQL, recovering from its own query errors, and explaining the results through a live web app with a transparent decision log. Built with read-only guardrails and safety limits. The natural next step from the campaign analysis: first I did the analysis by hand, then I built the system that does it on demand. Try it live at ashranawork-ai-agent.streamlit.app.",
+    tags: ["Python", "Gemini API", "AI Agents", "Streamlit"],
     image: "/projects/ai-agent.png",
     embedUrl: "",
+    liveUrl: "https://ashranawork-ai-agent.streamlit.app",
     github: "https://github.com/ashranawork/ai-data-analyst-agent",
   },
   {
